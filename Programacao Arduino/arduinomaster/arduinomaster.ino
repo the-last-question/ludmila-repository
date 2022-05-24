@@ -6,6 +6,9 @@
 #define regiao2 12
 #define regiao1 11
 
+float distancia;
+float soma = 0;
+
 void setup()
 {
   pinMode(regiao3, OUTPUT);
@@ -19,8 +22,14 @@ void setup()
 
 void loop()
 {
-  float distancia = getDistance();
-  Serial.println(distancia);
+  soma = 0;
+  for(int i = 0; i < 10; i++){
+    distancia = getDistance();
+    soma = soma + distancia;
+    }
+    soma = soma / 10;
+  Serial.print(String(soma,2));
+  Serial.print('\n');
 
   if (distancia < 10) {
     digitalWrite(regiao3, HIGH);
@@ -37,7 +46,7 @@ void loop()
     digitalWrite(regiao2, LOW);
     digitalWrite(regiao1, HIGH);
   }
-  delay(100);
+  delay(500);
 }
 
 float getDistance() {
