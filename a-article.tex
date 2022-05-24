@@ -76,7 +76,7 @@
 \end{abstract}
 
 \begin{IEEEkeywords}
-    component, formatting, style, styling, insert
+    Arduino, Comunicação Serial, Sistema Embarcado, styling, insert
 \end{IEEEkeywords}
 
 \section{Introdução}
@@ -92,15 +92,22 @@
 \subsection{Objetivos}
 
 \section{Referencial teórico}
-Falar sobre arduino, sensor e comunicação serial, etc.
+Nesta seção serão apresentados os dispositivos, e a forma de comunicação, utilizadas para o desenvolvimento do projeto.
+\subsection{Arduino}
+\subsection{Medição de distância através do Sensor ultrassônico}
+\subsection{Sinalização com LED(Light Emitting Diode)}
+\subsection{Display LCD(Liquid crystal display)}
+\subsection{Potenciômetro}
+\subsection{Comunicação Serial}
 
 \section{Metodologia}
 
-Inicialmente foi separado os materiais necessários para a realização do projeto, são eles:
+\subsection{Materiais}
+Os materiais de hardware utilizados para a elaboração do projeto foram:
 \begin{itemize}
     \item 2 arduinos UNO;
     \item 2 protoboards;
-    \item 1 potênciometro;
+    \item 1 potenciômetro;
     \item 1 display de LCD;
     \item 1 sensor ultrassônico HC-SR04;
     \item 32 jumpers;
@@ -110,37 +117,52 @@ Inicialmente foi separado os materiais necessários para a realização do proje
     \item 3 resistores de 220 \si{\ohm};
     \item 1 resistor de 1 K \si{\ohm};
 \end{itemize}
+Os softwares utlizados foram:
+\begin{itemize}
+    \item Tinkercad;
+    \item Arduino IDE;
+\end{itemize}
 
-Primeiramente, para construção do sistema foram realizadas pesquisas em fóruns de tecnologia, 
-vídeos no youtube e documentação do arduino, para o entendimento de como conectá-lo aos dispositivos e como programar-los.
+\subsection{Métodos}
 
-Em seguida, foram realizadas as conexões dos dispositivos ao arduino no simulador tinkercad.
+Realizou-se as conexões dos dispositivos ao arduino no simulador tinkercad conforme o mostrado na figura 1.
+Então, foi efetuada a programação de ambos os arduinos. O arduino 1 foi programado para captar dados do sensor ultrassônico, tratá-los
+e conforme a distância em centímetros identificada acender um led azul, vermelho e amarelo para representar a região ao qual se encontra o objeto, sendo que a região mais próxima é a região 3, representada pelo led azul.
+Além disso, ele também envia a informação sobre a distância de um objeto como string via comunicação serial para o arduino 2, que por sua vez utiliza de um display lcd, com regulação de brilho via potenciômetro, para mostrar a informação.
 
-Após isso, foi realizada a programação de ambos os arduinos.
+Em seguida, após a confecção do modelo virtual foi montado o circuito físico(Figura 2) com os mesmos materiais de hardware e com a mesma programação inserida nos dois arduinos através do software arduino IDE e uma conexão com um notebook.
 
-Logo após, foi montado o circuito físico.
-
-Mostrar a figura e falar sobre conexões, etc...
 
 \begin{figure}[htbp]
     \centerline{
-        \includegraphics[width=5cm]{images/esquema-arduino.png}
+        \includegraphics[width=4cm]{images/esquema-arduino.png}
     }
     \caption{Esquematico arduino.}
     \label{fig}
 \end{figure}
 
+\begin{figure}[htbp]
+    \centerline{
+        \includegraphics[width=4cm]{images/esquema-arduino.png}
+    }
+    \caption{Esquematico arduino.}
+    \label{fig}
+\end{figure}
 
-\section{Resultados e Discurssões}
+\section{Resultados e Análises}
 
 \subsection{Montagem do circuito}
 
-\subsection{Código Arduino 1}
+Na montagem do esquemático do circuito virtual no simulador Tinkercad não ocorreu nenhuma dificuldade relacionada à conexão entre componentes.
+Diferentemente da montagem do circuito físico, pois, devido ao mau contato entre as ligações os dados passados para o display estiveram corrompidos. Para solucionar este problema jumpers precisaram ser substituídos
+e o display precisou ser soldado a um suporte para conectá-lo à protoboard.
+
+\subsection{Código do Arduino Master}
 
 Falar sobre o código do arduino 1,
 mostrando coisas aprendidas durante sua produção.
 
-\subsection{Código Arduino 2}
+\subsection{Código do Arduino Servo}
 
 Falar sobre o código do arduino 2,
 mostrando coisas aprendidas durante sua produção.
@@ -150,6 +172,9 @@ Dar um fechamento ao trabalho.
 
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
+
+
+
 
 
 
