@@ -166,6 +166,9 @@ e o display precisou ser soldado a um suporte para conectá-lo à protoboard.
 \subsection{Efeito do delay}
 Notou-se que o valor utilizado na função delay afetou drasticamente a comunicação serial entre os dois arduinos, a forma encontrada para contornar isso foi utilizar a função delayMicroseconds. Pois, esta afeta menos ao tempo de comunicação do sistema.
 
+\subsection{Finalização da comunicação}
+Foi necessário o envio de uma sinalização de quebra de linha para o sistema do arduino receptor do pacote de informação para o mesmo identificar quando ocorreu o término da chegada do pacote.
+
 \subsection{Leitura do sensor ultrassônico HC-SR04}
 
 O sistema físico do arduino master ao receber dados referente ao tempo para a captação da reflexão de uma onda de som ultrassônico realizou o cálculo da distância entre o objeto e o sensor.
@@ -174,7 +177,10 @@ Foi perceptível a pequena oscilação entre os valores obtidos de distância, i
 Devido a essa oscilação, a forma utilizada para diminuir a alteração no valor de distância mostrado no display LCD foi mostrar nele a média de 5 valores lidos.
 
 \section{Conclusão}
-Conclui-se que os sensor ultrassônico HC-SR04... Além disso, o mal contato entre os componentes... Dessa forma, o projeto se apresentou como uma excelente forma de compreender o funcionamento de dispositivos eletrônicos e sua comunicação.
+Conclui-se que os sensor ultrassônico HC-SR04 possui um erro associado a sua leitura devido a fatores internos e externos.
+Além disso, que o contato adequado entre os componentes proporiona uma comunicação da informação corretamente. Ainda conclui-se que, o pacote de informação precisa ter algo para sinalizar que foi completamente enviado.
+
+Dessa forma, o projeto se apresentou como uma excelente forma de compreender o funcionamento de dispositivos eletrônicos e sua comunicação.
 
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
