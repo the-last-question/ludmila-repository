@@ -98,14 +98,19 @@ e enviará a informação de distância como o tipo string via comunicação ser
 Nesta seção serão apresentados os dispositivos, e a forma de comunicação, utilizadas para o desenvolvimento do projeto.
 
 \subsection{Arduino}
-É um \cite{cavalcante2011}
+A placa de circuitos arduino \ref{fig:arduino} é uma plataforma de prototipagem eletrônica de hardware livre, cuja linguagem de programação tem fortes semelhanças com
+as linguagens C/C++. Segundo Cavalcante, 2011 \cite{cavalcante2011} resumidamente, ela a consiste em uma placa com entradas e saídas para um microcontrolador AVR, um 
+ambiente de desenvolvimento (Arduino IDE) e o bootloader que já vem gravado no microcontrolador. 
+
+Dentro de sua estrutura de entradas e saídas ela possui duas portas de comunicação serial que utilizam o protocolo UART (Universal asynchronous receiver/transmitter), 
+Tx e Rx. Onde o TX é responsável pela emissão de dados e o RX pela recepção deles. No presente projeto há a comunicação entre dois arduinos utilizando dessa conexão.
 
 \begin{figure}[htbp]
     \centerline{
         \includegraphics[width=6cm]{images/arduino.png}
     }
     \caption{Arduino Uno R3.}
-    \label{fig}
+    \label{fig:arduino}
 \end{figure}
 
 \subsection{Medição de distância através do Sensor ultrassônico}
