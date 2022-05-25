@@ -4,7 +4,7 @@ Autora - Ludmila Nascimento Dos Anjos
 
 A pasta artigoludmila inclui um artigo no modelo IEEE, cujo título é "Trocando mensagens:Medição de distância e comunicação do valor".
 
-A pasta programação Arduino inclui os arquivos de programação do Arduino Mestre e o arduino Escravo.
+A pasta programação Arduino inclui os arquivos de programação do Arduino Mestre e o Arduino Escravo.
 
 Link do projeto no Tinkercad:
 
