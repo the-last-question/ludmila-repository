@@ -110,19 +110,20 @@ Nesta seção serão apresentados os dispositivos, e a forma de comunicação, u
 
 \subsection{Medição de distância através do Sensor ultrassônico}
 
-É um tipo\cite{nakatani2014}
+O sensor ultrassônico \ref{fig:ultrassonico} é um dispositivo utilizado para medir distâncias através do valor de tempo registrado entre a emissão e recepção de uma onda ultrassônica. O tempo é obtido utilizando-se a função \textit{pulseIn( int pinoReceptordoSinal, int intensidadedoPulso)}, que envia um pulso e retorna o valor de tempo. Segundo Nakatani, 2014 \cite{nakatani2014}, o sensor mede uma distância de 2 cm a 400 cm, com uma precisão de até 0.3 cm, sendo que essa distância pode ser calculada através da ref\{eq:1}.
+
 
 \begin{figure}[htbp]
     \centerline{
         \includegraphics[width=4cm]{images/sensor-ultrassonico.png}
     }
     \caption{Sensor Ultrassônico.}
-    \label{fig}
+    \label{fig:ultrassonico}
 \end{figure}
 
 
 \begin{equation}
-    distancia = tempo / 27.6233 / 2.0 \label{eq}
+    distancia = tempo / 27.6233 / 2.0 \label{eq:1}
 \end{equation}
 
 \subsection{Sinalização com LED(Light Emitting Diode)}
