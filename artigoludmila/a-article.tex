@@ -81,17 +81,16 @@
 
 \section{Introdução}
 
-\subsection{Contexto}
+O sistema embarcado, também conhecido como sistema embutido, é um sistema em que um computador está anexado ao sistema que ele controla, possuindo geralmente a arquitetura de Harvard, devido a necessidade de se pôr o microcontrolador para trabalhar rapidamente. 
+Esses sistemas revolucionaram a computação desde seu surgimento no século XX e possibilitaram o surgimento de dispositivos dedicados a resolverem desafios encontrados na vida do ser humano, presentes no dia-a-dia.
 
-\subsection{Justificativa}
+Muitos desses sistemas encontram-se interconectados no mundo moderno do século XXI, interagindo através de diversos protocolos de comunicação. Um exemplo de item que usa sistema embarcado são os carros inteligentes, 
+o sistema que eles possuem é dedicado a realizar funcionalidades específicas e limitadas e alguns desses sistemas podem se conectar a celulares possibilitando o transporte de informações entre os dispositivos. 
 
-\subsection{Porquê}
+Dessa forma, entender o funcionamento desses sistemas embarcados, os dispositivos conectados a eles, e as formas de comunicação entre esses sistemas é fundamental para trabalhar com tecnologia no mundo moderno. 
+Tendo em vista isso, o presente trabalho busca formar conhecimento a respeito dessas tecnologias através do desenvolvimento de um projeto  utilizando para tal a plataforma arduino.
 
-\subsection{Importância}
-
-\subsection{Objetivos}
-O objetivo do projeto trocando mensagens é a construção de um sistema utilizando dois arduinos,
-onde um deles medirá a distância entre um objeto e um sensor ultrassônico, sinalizando a região onde o objeto se encontra através de led's,
+O objetivo do projeto trocando mensagens é a construção de um sistema utilizando dois arduinos, onde um deles medirá a distância entre um objeto e um sensor ultrassônico, sinalizando a região onde o objeto se encontra através de led's, 
 e enviará a informação de distância como o tipo string via comunicação serial, para ser disponibilizada em um display LCD conectado ao segundo arduino.
 
 \section{Referencial teórico}
@@ -99,10 +98,10 @@ Nesta seção serão apresentados os dispositivos, e a forma de comunicação, u
 
 \subsection{Arduino}
 A placa de circuitos arduino \ref{fig:arduino} é uma plataforma de prototipagem eletrônica de hardware livre, cuja linguagem de programação tem fortes semelhanças com
-as linguagens C/C++. Segundo Cavalcante, 2011 \cite{cavalcante2011} resumidamente, ela a consiste em uma placa com entradas e saídas para um microcontrolador AVR, um 
-ambiente de desenvolvimento (Arduino IDE) e o bootloader que já vem gravado no microcontrolador. 
+as linguagens C/C++. Segundo Cavalcante, 2011 \cite{cavalcante2011} resumidamente, ela a consiste em uma placa com entradas e saídas para um microcontrolador AVR, um
+ambiente de desenvolvimento (Arduino IDE) e o bootloader que já vem gravado no microcontrolador.
 
-Dentro de sua estrutura de entradas e saídas ela possui duas portas de comunicação serial que utilizam o protocolo UART (\textit{Universal asynchronous receiver/transmitter}), 
+Dentro de sua estrutura de entradas e saídas ela possui duas portas de comunicação serial que utilizam o protocolo UART (\textit{Universal asynchronous receiver/transmitter}),
 Tx e Rx. Onde o TX é responsável pela emissão de dados e o RX pela recepção deles. No presente projeto há a comunicação entre dois arduinos utilizando dessa conexão.
 
 \begin{figure}[htbp]
@@ -115,8 +114,8 @@ Tx e Rx. Onde o TX é responsável pela emissão de dados e o RX pela recepção
 
 \subsection{Medição de distância através do Sensor ultrassônico}
 
-O sensor ultrassônico \ref{fig:ultrassonico} é um dispositivo utilizado para medir distâncias através do valor de tempo registrado entre a emissão e recepção de uma 
-onda ultrassônica. O tempo é obtido utilizando-se a função \textit{pulseIn( int pinoReceptordoSinal, int intensidadedoPulso)}, que envia um pulso e retorna o valor de 
+O sensor ultrassônico \ref{fig:ultrassonico} é um dispositivo utilizado para medir distâncias através do valor de tempo registrado entre a emissão e recepção de uma
+onda ultrassônica. O tempo é obtido utilizando-se a função \textit{pulseIn( int pinoReceptordoSinal, int intensidadedoPulso)}, que envia um pulso e retorna o valor de
 tempo. Segundo \cite{nakatani2014}, o sensor transmite 8 ciclos de pulsos ultrassônicos a 40 kHz e espera pelo sinal refletido, medindo uma distância de 2 cm a 400 cm,
 com uma precisão de até 0,3 cm, sendo que essa distância pode ser calculada através da \ref{eq:1}
 
@@ -134,8 +133,8 @@ com uma precisão de até 0,3 cm, sendo que essa distância pode ser calculada a
 \end{equation}
 
 \subsection{Display LCD(Liquid crystal display)}
-Um display de cristal líquido, é um dispositivo de painel fino utilizado para exibir informações através da comunicação de dados de bits por via eletrônica como 
-imagens, textos e vídeos. O LCD 12X2 \ref{fig:display} tem um fundo azul e escrita branca, possuindo 16 colunas e 2 linhas para escrita. Segundo Barbacena 1996 
+Um display de cristal líquido, é um dispositivo de painel fino utilizado para exibir informações através da comunicação de dados de bits por via eletrônica como
+imagens, textos e vídeos. O LCD 12X2 \ref{fig:display} tem um fundo azul e escrita branca, possuindo 16 colunas e 2 linhas para escrita. Segundo Barbacena 1996
 \cite{barbacena1996display}, há nele 16 pinos para conexão, sendo eles pinos de alimentação do módulo, ajuste de contraste, seleção, dados e alimentação da luz de fundo.
 
 \begin{figure}[htbp]
@@ -148,8 +147,8 @@ imagens, textos e vídeos. O LCD 12X2 \ref{fig:display} tem um fundo azul e escr
 
 \subsection{Potenciômetro}
 O potenciômetro \ref{fig:potenciometro} pode ser definido como uma resistência variável. Desse modo ele tem a capacidade de variar a corrente de um circuito e o brilho
-de um led. Segundo Patsko 2006  \cite{patsko2006}, ele é composto por uma faixa de material resistivo (geralmente grafite) ligada entre seus dois terminais externos, 
-nela há um cursor que a depender da alteração de sua posição é alterada a resistência entre o terminal e os dois terminais externos do dispositivo. 
+de um led. Segundo Patsko 2006  \cite{patsko2006}, ele é composto por uma faixa de material resistivo (geralmente grafite) ligada entre seus dois terminais externos,
+nela há um cursor que a depender da alteração de sua posição é alterada a resistência entre o terminal e os dois terminais externos do dispositivo.
 
 \begin{figure}[htbp]
     \centerline{
@@ -164,17 +163,15 @@ nela há um cursor que a depender da alteração de sua posição é alterada a 
 \subsection{Materiais}
 Os materiais de hardware utilizados para a elaboração do projeto foram:
 \begin{itemize}
-    \item 2 arduinos UNO;
-    \item 2 protoboards;
-    \item 1 potenciômetro;
-    \item 1 display de LCD;
-    \item 1 sensor ultrassônico HC-SR04;
-    \item 32 jumpers;
-    \item 1 LED azul;
-    \item 1 LED vermelho;
-    \item 1 LED amarelo;
-    \item 3 resistores de 220 \si{\ohm};
-    \item 1 resistor de 1 K \si{\ohm};
+    \item Arduino UNO;
+    \item Protoboards;
+    \item Potenciômetro;
+    \item Display de LCD;
+    \item Sensor ultrassônico HC-SR04;
+    \item Jumpers;
+    \item LED azul, vermelho e amarelo;
+    \item Resistores de 220 \si{\ohm};
+    \item Resistor de 1 K \si{\ohm};
 \end{itemize}
 Os softwares utlizados foram:
 \begin{itemize}
