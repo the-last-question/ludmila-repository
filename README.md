@@ -9,3 +9,7 @@ A pasta programação Arduino inclui os arquivos de programação do Arduino Mes
 Link do projeto no Tinkercad:
 
 https://www.tinkercad.com/things/3Du9q5At9HA-ludmila-desafio-2-final/editel
+
+Link do vídeo hospedado no Youtube:
+
+https://youtu.be/DNFJZB2kEZk
