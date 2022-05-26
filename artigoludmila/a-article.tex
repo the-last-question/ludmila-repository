@@ -51,7 +51,7 @@
 
 \begin{document}
 
-\title{Trocando mensagens: Medição de distância e comunicação do valor\\
+\title{Trocando mensagens: Medição de distância e comunicação de valores\\
 {\footnotesize \textsuperscript{*} Sistemas Embarcados: Prof. Marco Reis - marco.reis@ba.docente.senai.br}
 }
 
@@ -70,9 +70,10 @@
 \maketitle
 
 \begin{abstract}
-    This document is a model and instructions for \LaTeX.
-    This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes,
-    or Math in Paper Title or Abstract.
+    Embedded systems have revolutionized computing since its emergence in the 20th century and enabled the emergence of devices dedicated to solving everyday challenges encountered in human life. 
+    In view of this, the present work seeks to form knowledge about these technologies through the development of a system using two arduinos, where one of them will measure the distance between an object and an ultrasonic sensor, signaling the region where the object is through led's , 
+    and will send the distance information as a string via serial communication, to be made available on an LCD display connected to the second Arduino. In the end, it was concluded that the HC-SR04 ultrasonic sensor has an error associated with its reading due to internal and external factors. 
+    In addition, that the proper contact between the components provides a communication of the information correctly. It also follows that the information packet needs to have something to signal that it has been completely sent.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -81,16 +82,16 @@
 
 \section{Introdução}
 
-O sistema embarcado, também conhecido como sistema embutido, é um sistema em que um computador está anexado ao sistema que ele controla, possuindo geralmente a arquitetura de Harvard, devido a necessidade de se pôr o microcontrolador para trabalhar rapidamente. 
+O sistema embarcado, também conhecido como sistema embutido, é um sistema em que um computador está anexado ao sistema que ele controla, possuindo geralmente a arquitetura de Harvard, devido a necessidade de se pôr o microcontrolador para trabalhar rapidamente.
 Esses sistemas revolucionaram a computação desde seu surgimento no século XX e possibilitaram o surgimento de dispositivos dedicados a resolverem desafios encontrados na vida do ser humano, presentes no dia-a-dia.
 
-Muitos desses sistemas encontram-se interconectados no mundo moderno do século XXI, interagindo através de diversos protocolos de comunicação. Um exemplo de item que usa sistema embarcado são os carros inteligentes, 
-o sistema que eles possuem é dedicado a realizar funcionalidades específicas e limitadas e alguns desses sistemas podem se conectar a celulares possibilitando o transporte de informações entre os dispositivos. 
+Muitos desses sistemas encontram-se interconectados no mundo moderno do século XXI, interagindo através de diversos protocolos de comunicação. Um exemplo de item que usa sistema embarcado são os carros inteligentes,
+o sistema que eles possuem é dedicado a realizar funcionalidades específicas e limitadas e alguns desses sistemas podem se conectar a celulares possibilitando o transporte de informações entre os dispositivos.
 
-Dessa forma, entender o funcionamento desses sistemas embarcados, os dispositivos conectados a eles, e as formas de comunicação entre esses sistemas é fundamental para trabalhar com tecnologia no mundo moderno. 
+Dessa forma, entender o funcionamento desses sistemas embarcados, os dispositivos conectados a eles, e as formas de comunicação entre esses sistemas é fundamental para trabalhar com tecnologia no mundo moderno.
 Tendo em vista isso, o presente trabalho busca formar conhecimento a respeito dessas tecnologias através do desenvolvimento de um projeto  utilizando para tal a plataforma arduino.
 
-O objetivo do projeto trocando mensagens é a construção de um sistema utilizando dois arduinos, onde um deles medirá a distância entre um objeto e um sensor ultrassônico, sinalizando a região onde o objeto se encontra através de led's, 
+O objetivo do projeto trocando mensagens é a construção de um sistema utilizando dois arduinos, onde um deles medirá a distância entre um objeto e um sensor ultrassônico, sinalizando a região onde o objeto se encontra através de led's,
 e enviará a informação de distância como o tipo string via comunicação serial, para ser disponibilizada em um display LCD conectado ao segundo arduino.
 
 \section{Referencial teórico}
